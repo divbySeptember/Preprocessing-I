@@ -1,1 +1,394 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*----Variables-----*/
+/* color*/
+/*----End Variables-----*/
+/*-----mixin-----*/
+.new-container {
+  margin: 0;
+  padding: 0;
+  max-width: 1000;
+}
+.nav {
+  padding: 0 20px;
+  background: #0557af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+.nav h1 {
+  padding-left: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+.nav .social a {
+  font-size: 35px;
+  color: white;
+  margin: 0 20px;
+}
+.nav .fab:hover {
+  color: #95adc6;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+nav i {
+  font-size: 35px;
+  color: white;
+  margin: auto 10px;
+}
+nav i:hover {
+  color: #95adc6;
+  cursor: pointer;
+}
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px dashed #95adc6;
+}
+.head-container .d1 {
+  margin: 5% auto;
+}
+.head-container .d2 {
+  margin: 5% auto;
+}
+.d1 h1 {
+  font-family: impact;
+  font-size: 90px;
+  color: #0557af;
+}
+.d1 p {
+  padding-top: 15px;
+  font-family: sans-serif;
+  font-size: 50px;
+  color: #95adc6;
+  letter-spacing: 8px;
+}
+.d1 span {
+  padding-top: 15px;
+  font-family: sans-serif;
+  font-size: 50px;
+  color: #53ad93;
+  letter-spacing: 8px;
+}
+.d2 {
+  margin-top: 20px;
+}
+.d2 h1 {
+  font-family: impact;
+  font-size: 40px;
+  color: #0557af;
+}
+.d2 h2 {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #95adc6;
+  letter-spacing: 5px;
+  padding-top: 10px;
+}
+.d2 p {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 16px;
+  border-bottom: 2px solid #0be0a7;
+  letter-spacing: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.d2 span {
+  padding: 0 15px 0 ;
+  font-family: impact;
+  font-size: 18px;
+  color: #53ad93;
+}
+.info-content {
+  margin: auto 10%;
+  padding: 10% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 3px dashed #95adc6;
+}
+.info-content .d3 {
+  width: 50%;
+  margin: auto 20px;
+}
+.info-content .d4 {
+  width: 50%;
+  margin: auto 20px;
+}
+.d3 h1 {
+  padding: 50px 0 ;
+  font-family: impact;
+  font-size: 80px;
+  color: #53ad93;
+}
+.d3 img {
+  max-width: 200px;
+  height: 200px;
+  border: 8px solid #53ad93;
+}
+.d3 .img-text {
+  display: flex;
+}
+.d3 .img-text p {
+  margin: auto 20px;
+}
+.d4 h1 {
+  font-family: impact;
+  font-size: 25px;
+  color: #53ad93;
+}
+.d4 h2 {
+  font-family: sans-serif;
+  font-size: 25px;
+  color: #95adc6;
+}
+.d4 .progress {
+  margin: 10px 0;
+}
+.d4 .progress .progress-bar {
+  padding: 10px 0;
+}
+.work-ed {
+  margin: 50px 10%;
+  padding: auto 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.work-ed .d5 {
+  width: 50%;
+  margin: auto 20px;
+  margin-top: 20px;
+}
+.work-ed .d5 h1 {
+  font-family: impact;
+  font-size: 40px;
+  color: #0557af;
+}
+.work-ed .d5 h2 {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #95adc6;
+  letter-spacing: 5px;
+  padding-top: 10px;
+}
+.work-ed .d5 p {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 16px;
+  border-bottom: 2px solid #0be0a7;
+  letter-spacing: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.work-ed .d5 span {
+  padding: 0 15px 0 ;
+  font-family: impact;
+  font-size: 18px;
+  color: #53ad93;
+}
+.work-ed .d6 {
+  width: 50%;
+  margin: auto 20px;
+  margin-top: 20px;
+}
+.work-ed .d6 h1 {
+  font-family: impact;
+  font-size: 40px;
+  color: #0557af;
+}
+.work-ed .d6 h2 {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #95adc6;
+  letter-spacing: 5px;
+  padding-top: 10px;
+}
+.work-ed .d6 p {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 16px;
+  border-bottom: 2px solid #0be0a7;
+  letter-spacing: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.work-ed .d6 span {
+  padding: 0 15px 0 ;
+  font-family: impact;
+  font-size: 18px;
+  color: #53ad93;
+}
+footer {
+  height: 90px;
+  mpadding: 250px auto;
+  background: #0557af;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h1 {
+  padding-left: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+footer .social {
+  font-size: 35px;
+  color: white;
+  margin: 0 20px;
+}
+footer .fab:hover {
+  color: #95adc6;
+  cursor: pointer;
+}

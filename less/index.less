@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -57,3 +57,367 @@ html, body {
     height: 100%;
 }
 
+
+
+// Variables
+
+/*----Variables-----*/
+
+@primary: 	@base-color;
+@highlight: @high-color;
+@newhigh:		@high2-color;
+@headertext:@header-color;
+@subheader: @sub-color;
+
+
+/* color*/
+
+@base-color: 	#0557af; //'dark blue'
+@high-color: 	#0be0a7; // light green
+@header-color:#53ad93; // dark green
+@sub-color: 	#95adc6; // gray
+@high2-color: #568ec9; // light blue
+
+
+/*----End Variables-----*/
+
+/*-----mixin-----*/
+
+
+.layout() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.new-container{
+	margin: 0;
+	padding: 0;
+	max-width: 1000;
+}
+
+
+
+// Nesting
+
+.nav{
+	padding: 0 20px;
+	background: @primary;
+	.layout();
+	position: sticky;
+
+
+	h1{
+		padding-left: 20px;
+		font-size: 25px;
+		text-transform: uppercase;
+		color: white;
+	}
+
+	.social a{
+		font-size: 35px;
+		color: white;
+		margin: 0 20px;
+
+	}
+	.fab:hover{
+		color: @subheader;
+		cursor: pointer;
+	}
+}
+
+//new nest
+
+nav{
+	.layout();
+
+	h2{
+		font-size: 20px;
+		text-transform: uppercase;
+		color: white;
+	}
+
+
+	i{
+		font-size: 35px;
+		color: white;
+		margin:  auto 10px;
+	}
+	i:hover{
+		color: @subheader;
+		cursor: pointer;
+	}
+}
+
+//header end
+
+
+// head container section
+
+
+
+.head-container{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+
+				.d1{
+					margin: 5% auto;
+
+				}
+				.d2{
+					margin: 5% auto;
+
+				}
+				border-bottom: 3px dashed @subheader;
+
+}
+
+
+.d1{
+	h1{
+		font-family: impact;
+		font-size: 90px;
+		color: @primary;
+	}
+
+	p{
+		padding-top: 15px;
+		font-family: sans-serif;
+		font-size: 50px;
+		color: @subheader;
+		letter-spacing: 8px;
+
+
+	}
+	span{
+		padding-top: 15px;
+		font-family: sans-serif;
+		font-size: 50px;
+		color: @headertext;
+		letter-spacing: 8px;
+	}
+}
+
+
+.d2{
+	margin-top: 20px;
+	h1{
+		font-family: impact;
+		font-size: 40px;
+		color: @primary;
+	}
+	h2{
+		font-family: sans-serif;
+		font-size: 20px;
+		color: @subheader;
+		letter-spacing: 5px;
+		padding-top: 10px;
+	}
+
+	p{
+		width: 100%;
+		margin:  20px 0;
+		padding: 20px 0;
+		font-size: 16px;
+		border-bottom: 2px solid @highlight;
+		letter-spacing: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	span{
+		padding: 0 15px 0 ;
+		font-family: impact;
+		font-size: 18px;
+		color: @headertext;
+	}
+
+
+}
+
+
+
+// INFO CONTENT
+
+
+.info-content{
+	margin: auto 10%;
+	padding: 10% 10%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	border-bottom: 3px dashed @subheader;
+
+	.d3{
+		width: 50%;
+		margin: auto 20px;
+	}
+	.d4{
+		width: 50%;
+		margin: auto 20px;
+	}
+
+}
+
+
+.d3{
+	// padding-top:  -50px;
+	h1{
+		padding: 50px 0 ;
+		font-family: impact;
+		font-size: 80px;
+		color: @headertext;
+	}
+	img{
+		max-width: 200px;
+		height: 200px;
+		border: 8px solid @headertext;
+	}
+	.img-text{
+		display: flex;
+		// flex-wrap:
+		p{
+			margin: auto 20px;
+
+	}
+
+	}
+
+}
+.d4{
+	h1{
+		// padding: 15px 0 ;
+		font-family: impact;
+		font-size: 25px;
+		color: @headertext;
+	}
+	h2{
+		// padding: 15px auto ;
+		font-family: sans-serif;
+		font-size: 25px;
+		color: @subheader;
+	}
+	.progress{
+		margin: 10px 0;
+		.progress-bar{
+			padding: 10px 0;
+		}
+	}
+}
+
+
+
+
+
+.work-ed{
+	margin: 50px 10%;
+	padding: auto 10%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+
+
+	.d5{
+		width: 50%;
+		margin: auto 20px;
+		margin-top: 20px;
+		h1{
+			font-family: impact;
+			font-size: 40px;
+			color: @primary;
+		}
+		h2{
+			font-family: sans-serif;
+			font-size: 20px;
+			color: @subheader;
+			letter-spacing: 5px;
+			padding-top: 10px;
+		}
+
+		p{
+			width: 100%;
+			margin:  20px 0;
+			padding: 20px 0;
+			font-size: 16px;
+			border-bottom: 2px solid @highlight;
+			letter-spacing: 15px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		span{
+			padding: 0 15px 0 ;
+			font-family: impact;
+			font-size: 18px;
+			color: @headertext;
+		}
+	}
+	.d6{
+		width: 50%;
+		margin: auto 20px;
+		margin-top: 20px;
+		h1{
+			font-family: impact;
+			font-size: 40px;
+			color: @primary;
+		}
+		h2{
+			font-family: sans-serif;
+			font-size: 20px;
+			color: @subheader;
+			letter-spacing: 5px;
+			padding-top: 10px;
+		}
+
+		p{
+			width: 100%;
+			margin:  20px 0;
+			padding: 20px 0;
+			font-size: 16px;
+			border-bottom: 2px solid @highlight;
+			letter-spacing: 15px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		span{
+			padding: 0 15px 0 ;
+			font-family: impact;
+			font-size: 18px;
+			color: @headertext;
+		}
+	}
+}
+
+
+footer{
+	height: 90px;
+	m
+	padding: 250px auto;
+	background: @primary;
+	.layout();
+
+
+	h1{
+		padding-left: 20px;
+		font-size: 25px;
+		text-transform: uppercase;
+		color: white;
+	}
+
+	.social{
+		font-size: 35px;
+		color: white;
+		margin: 0 20px;
+
+	}
+	.fab:hover{
+		color: @subheader;
+		cursor: pointer;
+	}
+
+
+}
